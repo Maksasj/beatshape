@@ -15,7 +15,7 @@ TITLE = "Beatshape"
 
 pygame.init()
 hit_sound = pygame.mixer.Sound("data/sounds/hit.wav")
-main_music = pygame.mixer.music.load("data/sounds/main_theme.wav")
+main_music = pygame.mixer.music.load("data/sounds/main_theme.mp3")
 pygame.mixer.music.play(-1)
 pygame.mixer.music.set_volume(0.25)
 
