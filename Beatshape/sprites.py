@@ -63,3 +63,31 @@ class Point(pygame.sprite.Sprite):
         col = pygame.sprite.collide_rect(self, player)
         if col == True:
             return True
+
+class Coin(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        super().__init__()
+        self.x = int(x)
+        self.y = int(y)
+        self.rect = pygame.Rect(self.x, self.y, 16, 16)
+        self.color = (236, 245, 66)
+    def draw(self, win):
+        #glowing = pygame.Rect(self.x, self.y, 32, 32)
+        #pygame.draw.rect(win, self.color, self.rect)
+        pygame.draw.rect(win, self.color, self.rect)
+    def col(self,player):
+        col = pygame.sprite.collide_rect(self, player)
+        if col == True:
+            return True
+
+class Shield_Button(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        super().__init__()
+        self.x = int(x)
+        self.y = int(y)
+        self.rect = pygame.Rect(self.x, self.y, 80, 90)
+        
+    def draw(self, win , color):
+        #glowing = pygame.Rect(self.x, self.y, 32, 32)
+        #pygame.draw.rect(win, self.color, self.rect)
+        pygame.draw.rect(win, color, self.rect)
